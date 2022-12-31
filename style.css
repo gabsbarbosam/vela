@@ -1,0 +1,81 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --background: #2d3d50;
+  --flame: #ffad00;
+  --wax: #ffffff;
+  --wick: #ad8709;
+  --stand: #1c233e;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--background);
+}
+
+.wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 4px;
+  box-shadow: 4px 8px 16px 0 #00000010;
+  overflow: hidden;
+  background: var(--background);
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.candle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.candle-flame {
+  width: 15px;
+  height: 30px;
+  background: var(--flame);
+  border-radius: 8px 8px 8px 8px / 20px 20px 8px 8px;
+  /* box-shadow: 0px 0px 20px 0px var(--flame-shadow); */
+}
+
+.candle-wick {
+  height: 10px;
+  width: 3px;
+  background: var(--wick);
+}
+
+.candle-wax {
+  width: 40px;
+  height: 110px;
+  background: var(--wax);
+  border-radius: 6px;
+  box-shadow: inset -15px 0px 0px -10px var(--wax);
+}
+
+.candle-stand {
+  width: 100px;
+  height: 8px;
+  background: var(--stand);
+  border-radius: 3px;
+}
